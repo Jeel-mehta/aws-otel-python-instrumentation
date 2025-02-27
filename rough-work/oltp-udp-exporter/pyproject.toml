@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aws-otel-udp-exporter"
+version = "0.1.0"
+description = "AWS OpenTelemetry UDP Exporter"
+requires-python = ">=3.7"
+authors = [
+    {name = "Amazon.com, Inc. or its affiliates", email = "jeelmm@amazon.com"}
+]
+dependencies = [
+    "opentelemetry-api>=1.0.0",
+    "opentelemetry-sdk>=1.0.0",
+    "opentelemetry-exporter-otlp>=1.0.0",
+    "typing-extensions>=4.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
